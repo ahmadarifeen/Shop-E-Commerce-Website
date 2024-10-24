@@ -611,3 +611,106 @@ button[type="submit"]:hover {
     to { opacity: 1; transform: translateY(0); }
 }
     
+/* Auth Links */
+.auth-link {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.auth-link:hover {
+    color: aqua;
+    
+}
+
+/* Modal container */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Black with opacity */
+    overflow: auto; /* Enables scroll if content overflows */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto; 
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+    width: 350px; 
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Fade-in animation for modal */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Custom form styling specific to modal forms */
+.modal-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.modal-input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Custom Button Styling specific to modal buttons */
+.modal-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.modal-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive layout for small screens */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 95%; /* Make modal width responsive */
+    }
+}
+

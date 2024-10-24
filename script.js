@@ -163,3 +163,35 @@ window.onclick = function(event) {
     }
 };
 
+document.querySelector('.input-group-text').addEventListener('click', function () {
+    const passwordInput = document.getElementById('passwordInput');
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      this.innerHTML = '<i class="bi bi-eye"></i>';
+    } else {
+      passwordInput.type = 'password';
+      this.innerHTML = '<i class="bi bi-eye-slash"></i>';
+    }
+  });
+  // Open the modal
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
+
+// Close the modal
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+// Close the modal when user clicks outside the modal
+window.onclick = function(event) {
+    const loginModal = document.getElementById("loginModal");
+    const registrationModal = document.getElementById("registrationModal");
+
+    if (event.target === loginModal) {
+        loginModal.style.display = "none";
+    }
+    if (event.target === registrationModal) {
+        registrationModal.style.display = "none";
+    }
+}
